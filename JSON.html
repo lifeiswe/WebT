@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <script type="text/javascript">
+        var str='{"name":"PES","year":"2023"}'
+        var obj=JSON.parse(str);
+        document.getElementById("d1").innerHTML=obj.name;
+
+        obj.city="Bengaluru";
+
+        str=JSON.stringify(obj);
+        document.getElementById("d2").innerHTML=str;
+
+    </script>
+</body>
+</html>

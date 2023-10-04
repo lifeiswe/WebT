@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <button onclick="fetchdata()">Fetch Data</button>
+    <div id="mydiv"></div>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        function fetchdata(){
+            mydiv=document.querySelector("#mydiv");
+            fetch('rasengan.txt')
+            .then(function(response)
+            {
+                alert("fetching data...");
+                return response.text();
+            })
+            .then(function(text)
+            {
+                alert("be ready!");
+                alert("here it comes!");
+                mydiv.innerHTML=text;
+            })
+            .catch(function(error){
+            console.log(error.message);
+            })
+        }
+    </script>
+</body>
+</html>

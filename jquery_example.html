@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<script src="jquery-3.6.0.js "></script>
+		
+		
+		<script>
+			$(document).ready(function(){
+				$("p").click (function(){
+					$(this).css("color","blue").html("I was Clicked");
+				})
+			});	
+					
+			$(document).ready(function(){
+				$("#b1").click(function(){
+					$("p").hide(500);
+				});
+				$("#b2").click(function(){
+					$("p").show("slow");
+				});
+			});		
+				
+
+				
+			$(document).ready(function(){
+				$("p").on("click", function(){
+					$(this).css("color","blue").html("I was Clicked");
+				})
+			});
+			
+					
+			$(document).ready(function(){
+				$("p").click (function(){
+					$("ul").slideToggle("slow");
+				})
+			});
+
+
+
+			$(document).ready(function(){
+				$("li.g1").click(function(){
+					$(this).fadeOut(1000,function(){
+						$(this).fadeIn(2000, function(){                 //Callback Hell
+							$(this).click();
+						});
+					})
+				})
+			});
+			
+		</script>
+	</head>
+	<body>
+		<p>Click this text</p>
+		
+		<ul>
+			<li> Data Structures </li>
+			<li class="g1"> Web Technologies</li>
+			<li > Data Science</li>
+			<li> AFLL </li>
+		</ul>
+	</body>
+</html>

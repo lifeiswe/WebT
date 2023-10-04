@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Re-Evalution Request</title>
+</head>
+<body>
+    <div align="center"><img src="logoPesu.png" alt="PESU Logo" id="logo" width="200" align="center"> <!-- PESU Logo at top center --></div>
+    <h2>Re-evaluation Request Form</h2>
+    <div id="fullform">
+    <table  class=tab style="font-size:25px" border="" align="center">
+    <form method="post" action="" target="_blank">
+        <tr width="100">
+            <td>
+                Name:
+            </td>
+            <td>
+                <input class="textbox" type="text" name="f_name" placeholder="Enter your name" required="required">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                SRN:
+            </td>
+            <td>
+                <input class="textbox" type="text" name="srn" placeholder="Enter your SRN" required="required">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Gender:
+            </td>
+            <td>
+                <input type="radio" name="g1" value="male">Male
+                <input type="radio" name="g1" value="female">Female
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email:
+            </td>
+            <td>
+                <input class="textbox" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  placeholder="Enter your mail ID" required="required">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Phone No.:
+            </td>
+            <td>
+                <input class="textbox" type="tel" pattern="[6-9]{1}[0-9]{9}" placeholder="Enter your mobile no."required="required">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Date Of Request:
+            </td>
+            <td>
+                <input type="date" required="required">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Subject:
+            </td>
+            <td>
+                <select name="subject" id="subject0" placeholder="Select your subject">
+                    <option value="">Select an option</option>
+                    <option value="wt">Web Technology</option>
+                    <option value="sds">Statistics in Data Science</option>
+                    <option value="dsa">Data structure and its application</option>
+                    <option value="ddco">Digital Design and Computer organisation </option>
+                    <option value="afll">Automata Formal language and logic</option>
+                </select>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><input type="checkbox" required="required">I hereby confirm my details</td>
+        </tr>
+        <tr>
+            <td>
+            <button type="submit" ondblclick="f1()">Submit</button></td>
+            <td><button type="reset">reset</button></td>
+        </tr>
+    </form>
+    </table>
+    </div>
+    <script type="text/javascript">
+        function f1() {
+            alert("Successfully submitted");}
+        </script>
+</body>
+</html>

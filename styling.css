@@ -1,0 +1,49 @@
+            /* body{
+                background-image:url("14-144041_aesthetic-wallpaper-desktop.jpg");
+            } */
+            h2:active{
+                background-color: rgb(184, 22, 22);
+                color:rgb(230, 183, 125);
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+            }
+            ol{
+                color:rgb(236, 192, 17);
+            }
+            .cls1{
+                background-color: black;
+                color:aliceblue;
+            }
+            td:hover{
+                background-color: bisque;
+            }
+            #VL:hover{
+                background-color: aliceblue;
+            }
+            p{
+                padding:25px;
+                margin:25px;
+                border:5px solid rgb(255, 144, 47);
+            }
+            h1{
+                padding:25px;
+                margin:25px;
+                position:static;
+                left:500px;
+            }
+            h2{
+                text-align: center;
+                font-size: 50px;
+                position:sticky;
+                top:0px;
+                color:crimson;
+                background-color: black;
+                font-family:"Times New Roman";
+                border:5px;
+                padding:25px;
+                margin:50px;
+
+            }
+            a:link{
+                color: black;
+            }

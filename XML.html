@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML</title>
+</head>
+<body>
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <script>
+        text= "<bookstore>"+
+                "<book>"+
+                    "<title>PES</title>"+
+                    "<year>2023</year>"+
+                "</book>"+
+              "</bookstore>";
+    var p1=new DOMParser();
+    x=p1.parseFromString(text,"text/xml");
+    t=x.getElementsByTagName("title")[0];
+
+    document.getElementById("d1").innerText=t.childNodes[0].nodeValue
+    </script>
+</body>
+</html>

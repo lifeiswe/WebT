@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <titile>Structure of HTML</titile>
+    </head>
+    <body>
+        <h3 id="demo"></h3>
+        <button onmouseover="f1()">Hit me</button>
+        <h1>Hello, </h1>
+        <p class="Dheeraj">Welcome</p>
+        <p>Hi</p>
+        <p>Hello</p>
+        <p>Sayonara</p>
+        <style>
+            h1{
+                color:aquamarine;
+                background-color: black;
+            }
+            .Dheeraj{
+                color:blueviolet;
+                font-family:"Lucida Handwriting";
+            }
+        </style>
+        <script>
+            function f1(){
+                document.getElementById("demo").innerHTML="Don't hit me"
+            }
+            document.getElementsByTagName("h1")[0].innerHTML="How are you";
+            // document.getElementsByClassName("Dheeraj")[0].innerHTML="Welcome to Document Object Model"
+            document.querySelector("p").innerHTML="Using Query selector"
+            var p=document.querySelectorAll("p");
+            for(let i=1;i<p.length;i++){
+                p[i].innerHTML="Hello"
+            }
+            const para1=document.createElement("h4");
+            para1.innerHTML="This is paragraph";
+            document.body.appendChild(para1);
+
+        </script>
+    </body>
+</html>

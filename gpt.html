@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-evaluation Request</title>
+    <link rel="stylesheet" href="stylesheet.css"> <!-- External CSS file for styling -->
+</head>
+<body>
+    <img src="am-i-the-only-one-who-hates-the-new-logo-v0-ovtggurlstl91.jpeg" alt="PESU Logo" id="logo" width="200" align="center"> <!-- PESU Logo at top center -->
+
+    <h1>Re-evaluation Request Form</h1>
+
+    <form id="reevaluationForm" onsubmit="submitForm(); return false;">
+        <table style="font-size:25px" border="" align="center">
+            <tr>
+                <th><label for="name">Name:</label></th>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <th><label for="srn">SRN:</label></th>
+                <td><input type="text" id="srn" name="srn" required></td>
+            </tr>
+            <tr>
+                <th><label for="subject">Subject for Re-evaluation:</label></th>
+                <td><input type="text" id="subject" name="subject" required></td>
+            </tr>
+            <tr>
+            <input type="radio" name="g1" value="male">Male
+                <input type="radio" name="g1" value="female">Female
+            </tr>
+            <tr>
+                <th><label for="email">Email:</label></th>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <th><label for="mobile">Mobile Number:</label></th>
+                <td><input type="tel" id="mobile" name="mobile" pattern="[0-9]+" required></td>
+            </tr>
+            <tr>
+                <th><label>Date of Request:</label></th>
+                <td><input type="date" id="date" name="date" required></td>
+            </tr>
+            <tr>
+                <th>Other Details:</th>
+                <td><textarea id="otherDetails" name="otherDetails"></textarea></td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="checkbox" id="confirmDetails" required> I confirm that all details are appropriate.</th>
+            </tr>
+            <tr>
+                <td><input type="submit" onclick="submitForm()"value="Submit"></td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+        </table>
+
+        
+    </form>
+
+    <script>
+        function submitForm() {
+            alert("Successfully submitted");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react</title>
+    <script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script>
+    <script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+</head>
+<body>
+    <!-- <div id="container"></div>
+    <script type="text/babel">
+        function Hello(){
+            return <p>Stateless component</p>
+        }
+ReactDOM.render(<Hello />,document.querySelector("#container")) -->
+    <div id="container"></div>
+    <script type="text/babel">
+        var c1=document.querySelector("#container");
+        class Letter extends React.Component{
+            render(){
+                var letterStyle={
+                    padding:"20px",
+                    margin:"20px",
+                    background:this.props.bgcolor,
+                    color:"#333",
+                    display:"inline-block",
+                };
+                return(
+                    <div style={letterStyle}>
+                        {this.props.children}
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(
+            <div>
+                <Letter bgcolor="red">A</Letter>
+                <Letter bgcolor="blue">B</Letter>
+                <Letter bgcolor="yellow">C</Letter>
+                <Letter bgcolor="green">D</Letter>
+                <Letter bgcolor="orange">E</Letter>
+            </div>
+            ,c1)
+    </script>
+</body>
+</html>

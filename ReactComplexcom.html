@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactComplex</title>
+    <script src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/babel">
+        
+    class SrchResult extends React.Component{
+        render(){
+            return(
+                <div>
+                    <Resimage/>
+                    <ResCaption/>
+                    <ResLink/>
+                </div>
+            );
+        }
+    }
+
+    class Resimage extends React.Component{
+        render(){
+            return(
+                <div>
+                <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="Lights"/>
+                </div>
+            );
+        }
+    }
+
+    class ResCaption extends React.Component{
+        render(){
+            return(
+                <div>
+                    <h3>Lights</h3>
+                </div>
+            );
+        }
+    }
+
+    class ResLink extends React.Component{
+        render(){
+            return(
+                <div>
+                    <a href="https://www.w3schools.com/w3css/img_lights.jpg">View</a>
+                </div>
+            );
+        }
+    }
+    ReactDOM.render(<div><SrchResult></SrchResult></div>,document.getElementById('container'));
+    
+</script>
+</body>
+</html>

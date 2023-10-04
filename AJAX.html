@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function loaddata(){
+        let xhr=new XMLHttpRequest();
+        xhr.open("get","sample.txt",true);
+        xhr.onreadystatechange= showdata;
+        xhr.responseType="text";
+        xhr.send();
+    }
+
+    function showdata(){
+        if(this.readyState==4 && this.status==200){
+            document.querySelector("#container").innerHTML=this.response;
+        }
+    }
+    </script>
+    <button onclick="loaddata()">Load data</button>
+    <p id="container"></p>
+
+    
+</body>
+</html>

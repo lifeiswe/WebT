@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="author"
+            content="Dheeraj"/>
+        <meta http-equiv="pragma"
+            content="no-cache"/>
+        <titile>Structure of HTML</titile>
+    </head>
+    <body>
+        <h2></h2>
+        <button id="id05">Display</button>
+        <style type="text/css">
+            div{
+                border:5px solid red;
+                padding:20px;
+                text-align: center;
+            }
+        </style>
+        <div id="DIV1">
+            Ragnar
+            <div id="DIV2">
+                Rollo
+                <div id="DIV3">
+                    Bjorn
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.getElementById("id05").addEventListener("dblclick",function(){
+                document.getElementById("id05").innerHTML="Hello World"
+            })
+            var divElements=document.getElementsByTagName('div');
+            for(var i=0;i<divElements.length;i++){
+                divElements[i].addEventListener("click",clickHandler,false);
+            }
+            function clickHandler(){
+                alert(this.getAttribute("id")+ " click event handled ");
+            }
+        
+        </script>
+    </body>
+</html>
